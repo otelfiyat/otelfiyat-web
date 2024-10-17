@@ -9,6 +9,59 @@ const config: Config = {
     "./src/lib/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      "brand-primary": {
+        50: "#eeedf5",
+        100: "#c9c6df",
+        200: "#afaacf",
+        300: "#8b84b9",
+        400: "#8b84b9",
+        500: "#524797",
+        600: "#4b4189",
+        700: "#3a326b",
+        800: "#2d2753",
+        900: "#221e3f",
+      },
+      "brand-secondary": {
+        50: "#fef6e9",
+        100: "#FCE2BC",
+        200: "#fbd49c",
+        300: "#f9c16e",
+        400: "#f8b552",
+        500: "#f6a227",
+        600: "#e09323",
+        700: "#af731c",
+        800: "#875915",
+        900: "#674410",
+      },
+      "brand-neutral": {
+        50: "#f6f6f7",
+        100: "#e4e4e5",
+        200: "#d7d7d8",
+        300: "#c5c5c6",
+        400: "#bababb",
+        500: "#a9a9aa",
+        600: "#9a9a9b",
+        700: "#787879",
+        800: "#5d5d5e",
+        900: "#474747",
+      },
+      "brand-negative": "#DE1135",
+      "brand-positive": "#0E8345",
+      "brand-warning": "#F6BC2F",
+      "brand-light-blue": "#EFF4FE",
+      "brand-blue": "#175BCC",
+      "brand-light-green": "#E7F3EC",
+      "brand-green": "#166C3B",
+      "brand-light-yellow": "#FEF8EA",
+      "brand-yellow": "#E0AB2B",
+      "brand-light-red": "#FCE7EB",
+      "brand-red": "#BB032A",
+      "brand-black": "#000000",
+      "brand-white": "#ffffff",
+    },
     container: {
       center: true,
       padding: {
@@ -40,7 +93,7 @@ const config: Config = {
           error: "#de1135",
           //other customizations
           "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
-          "--rounded-btn": "12px", // border radius rounded-btn utility class, used in buttons and similar element
+          "--rounded-btn": "6px", // border radius rounded-btn utility class, used in buttons and similar element
           "--rounded-badge": "1.9rem", // border radius rounded-badge utility class, used in badges and similar
           "--animation-btn": "0.25s", // duration of animation when you click on button
           "--animation-input": "0.2s", // duration of animation for inputs like checkbox, toggle, radio, etc
