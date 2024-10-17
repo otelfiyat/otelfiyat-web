@@ -1,10 +1,9 @@
-import Typography from "@/components/UI/Typography";
-import AuthButtons from "./AuthButtons";
 import NavigationLinks from "./NavigationLinks";
 import SocialMediaLinks from "./SocialMediaLinks";
 import SidebarHeader from "./SidebarHeader";
 import DrawerTrigger from "./DrawerTrigger";
 import DrawerContent from "./DrawerContent";
+import SidebarSubHeader from "./SidebarSubHeader";
 
 const MobileSidebar = () => {
   return (
@@ -12,7 +11,7 @@ const MobileSidebar = () => {
       <DrawerTrigger />
       <DrawerContent>
         <SidebarHeader />
-        <AuthButtons />
+        <SidebarSubHeader />
         <nav>
           <ul className="flex flex-col gap-4">
             <NavigationLinks />

@@ -65,10 +65,11 @@ const config: Config = {
     container: {
       center: true,
       padding: {
-        DEFAULT: "1rem",
-        sm: "2rem",
-        lg: "4rem",
-        xl: "5rem",
+        DEFAULT: ".5rem",
+        sm: "1rem",
+        lg: "1rem",
+        xl: "3rem",
+        "2xl": "8rem",
       },
     },
     extend: {},
