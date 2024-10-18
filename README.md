@@ -1,8 +1,8 @@
-# Otel Fiyat
+# otelfiyat.com
 
 ## Overview
 
-Otel Fiyat is a project designed to help users compare hotel prices and find the
+otelfiyat.com is a project designed to help users compare hotel prices and find the
 best deals.
 
 ## Features
@@ -23,14 +23,14 @@ best deals.
    ```
 3. Install the dependencies:
    ```bash
-   npm install
+   yarn
    ```
 
 ## Usage
 
 1. Start the application:
    ```bash
-   npm start
+   yarn dev
    ```
 2. Open your browser and go to `http://localhost:3000`
 
