@@ -31,8 +31,12 @@ const ProfileDropdown = () => {
               />
 
               <Typography
-                variant="title2"
-                type="span"
+                variant="span"
+                fs={{
+                  mobile: "title2",
+                  tablet: "title2",
+                  desktop: "title2",
+                }}
                 className="text-brand-neutral-800 text-nowrap"
               >
                 {item.title}

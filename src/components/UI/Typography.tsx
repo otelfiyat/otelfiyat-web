@@ -1,4 +1,5 @@
-type Variant =
+type FontWeight = "regular" | "medium" | "semibold" | "bold";
+type FontSize =
   | "h1"
   | "h2"
   | "h3"
@@ -11,22 +12,20 @@ type Variant =
   | "body2"
   | "caption";
 
-type FontWeight = "regular" | "medium" | "semibold" | "bold";
-
-type Tag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span";
+type Variant = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span";
 
 interface TypographyProps {
   variant: Variant;
-  type: Tag;
-  fontWeight?: FontWeight;
+  fs?: { mobile: FontSize; tablet: FontSize; desktop: FontSize };
+  fw?: FontWeight;
   className?: string;
   children: React.ReactNode;
 }
 
 const Typography = ({
   variant,
-  type,
-  fontWeight = "regular",
+  fs = { mobile: "body1", tablet: "body1", desktop: "body1" },
+  fw = "regular",
   className = "",
   children,
 }: TypographyProps) => {
@@ -37,25 +36,28 @@ const Typography = ({
     bold: "font-bold",
   };
 
-  const variants = {
-    h1: "text-4xl",
-    h2: "text-3xl",
-    h3: "text-2xl",
-    h4: "text-xl",
-    h5: "text-lg",
-    h6: "text-base",
-    title1: "text-lg",
-    title2: "text-base",
-    body1: "text-sm",
-    body2: "text-xs",
+  const fontSizes = {
+    h1: "text-7xl",
+    h2: "text-6xl",
+    h3: "text-5xl",
+    h4: "text-4xl",
+    h5: "text-3xl",
+    h6: "text-2xl",
+    title1: "text-xl",
+    title2: "text-lg",
+    body1: "text-base",
+    body2: "text-sm",
     caption: "text-xs",
   };
 
-  const defaultClassName = `${fontWeights[fontWeight]} ${variants[variant]} ${className}`;
+  const defaultClassName = `${fontWeights[fw]} ${fontSizes[fs.mobile]} sm:${
+    fontSizes[fs.tablet]
+  } lg:${fontSizes[fs.desktop]}
+   ${className}`;
 
-  const Tag = type;
+  const Variant = variant as keyof JSX.IntrinsicElements;
 
-  return <Tag className={defaultClassName}>{children}</Tag>;
+  return <Variant className={defaultClassName}>{children}</Variant>;
 };
 
 export default Typography;

@@ -1,13 +1,16 @@
 import Typography from "@/components/UI/Typography";
-import React from "react";
 
 const SidebarHeader = () => {
   return (
     <div className="flex items-center justify-between">
       <Typography
-        type="h2"
-        variant="h5"
-        fontWeight="semibold"
+        variant="h2"
+        fs={{
+          mobile: "h5",
+          tablet: "h5",
+          desktop: "h5",
+        }}
+        fw="semibold"
         className="text-brand-primary-700"
       >
         Hoşgeldiniz

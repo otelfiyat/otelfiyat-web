@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "OtelFiyat.com",
+  title: "otelfiyat.com",
   description: "En Çok Otel En Uygun Fiyat",
 };
 

@@ -12,9 +12,13 @@ const SidebarSubHeader = () => {
         <>
           <hr className="text-brand-primary-100" />
           <Typography
-            variant="body1"
-            fontWeight="semibold"
-            type="p"
+            variant="p"
+            fs={{
+              mobile: "title2",
+              tablet: "title2",
+              desktop: "title2",
+            }}
+            fw="semibold"
             className="text-brand-primary-700 ms-4"
           >
             Müşteri Adı
@@ -23,9 +27,13 @@ const SidebarSubHeader = () => {
       ) : (
         <div className="flex flex-col gap-3">
           <Typography
-            variant="body1"
-            fontWeight="medium"
-            type="p"
+            variant="p"
+            fs={{
+              mobile: "body1",
+              tablet: "body1",
+              desktop: "body1",
+            }}
+            fw="medium"
             className="text-brand-neutral-900"
           >
             Üyelere özel fiyatları kaçırmayın!

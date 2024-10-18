@@ -10,9 +10,13 @@ const NavigationLinks = () => {
         <li key={link.label}>
           <Link href={link.href}>
             <Typography
-              variant="body2"
-              fontWeight="medium"
-              type="span"
+              variant="span"
+              fs={{
+                mobile: "body2",
+                tablet: "body2",
+                desktop: "body2",
+              }}
+              fw="medium"
               className="text-neutral-900"
             >
               {link.label}
@@ -25,9 +29,13 @@ const NavigationLinks = () => {
         <li key={link.label}>
           <Link href={link.href}>
             <Typography
-              variant="body2"
-              type="span"
-              fontWeight="medium"
+              variant="span"
+              fs={{
+                mobile: "body2",
+                tablet: "body2",
+                desktop: "body2",
+              }}
+              fw="medium"
               className="text-neutral-900"
             >
               {link.label}
