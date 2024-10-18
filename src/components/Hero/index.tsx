@@ -1,4 +1,3 @@
-import Typography from "../UI/Typography";
 import HeroTitle from "./HeroTitle";
 import QuickSearchForm from "./QuickSearchForm";
 
@@ -6,18 +5,9 @@ const Hero = () => {
   return (
     <>
       <div className="border-2 border-brand-primary-200 rounded p-1 my-2 w-fit">
-        <Typography
-          variant="p"
-          fs={{
-            mobile: "caption",
-            tablet: "caption",
-            desktop: "caption",
-          }}
-          fw="medium"
-          className="text-brand-primary-200"
-        >
+        <p className="text-brand-primary-200 size-caption font-medium">
           İdeal Tur Turizm Tic. A. Ş. - İdeal Tur Seyahat Acentası Belge No:3304
-        </Typography>
+        </p>
       </div>
       <section className="hero overflow-hidden sm:min-h-96 sm:h-fit sm:rounded-xl">
         <div className="hero-overlay bg-hero-bg-overlay" />

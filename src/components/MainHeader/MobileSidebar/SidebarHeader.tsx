@@ -1,20 +1,9 @@
-import Typography from "@/components/UI/Typography";
-
 const SidebarHeader = () => {
   return (
     <div className="flex items-center justify-between">
-      <Typography
-        variant="h2"
-        fs={{
-          mobile: "h5",
-          tablet: "h5",
-          desktop: "h5",
-        }}
-        fw="semibold"
-        className="text-brand-primary-700"
-      >
+      <h2 className="text-brand-primary-700 font-semibold size-h5">
         Hoşgeldiniz
-      </Typography>
+      </h2>
       <label
         htmlFor="mobile-sidebar-drawer"
         aria-label="close sidebar"

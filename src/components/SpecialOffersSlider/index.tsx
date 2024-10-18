@@ -1,8 +1,9 @@
 "use client";
 
-import SpecialOffer from "./SpecialOffer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+
+import SpecialOffer from "./SpecialOffer";
 
 import "swiper/css";
 import "swiper/css/autoplay";

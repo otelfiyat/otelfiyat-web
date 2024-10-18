@@ -1,5 +1,4 @@
-import Hero from "@/components/Hero";
-import SpecialOffersSlider from "@/components/SpecialOffersSlider";
+import { Hero, SpecialOffersSlider } from "@/components";
 
 //TODO: SpecialOffers need to be fetched from an API
 const specialOffers = [
