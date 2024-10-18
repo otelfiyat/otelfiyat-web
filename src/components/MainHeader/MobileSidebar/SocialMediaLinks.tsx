@@ -1,7 +1,7 @@
-import Typography from "@/components/UI/Typography";
-import { SOCIAL_LINKS } from "@/lib/utils/social-links";
 import Image from "next/image";
 import Link from "next/link";
+
+import { SOCIAL_LINKS } from "@/lib/utils/social-links";
 
 const SocialMediaLinks = () => {
   return (
@@ -18,18 +18,9 @@ const SocialMediaLinks = () => {
               width={24}
               height={24}
             />
-            <Typography
-              variant="span"
-              fs={{
-                mobile: "body2",
-                tablet: "body2",
-                desktop: "body2",
-              }}
-              fw="medium"
-              className="text-neutral-700"
-            >
+            <span className="text-neutral-700 font-medium size-body2">
               {link.label}
-            </Typography>
+            </span>
           </Link>
         </li>
       ))}

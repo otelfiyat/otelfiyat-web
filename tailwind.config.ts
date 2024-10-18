@@ -76,6 +76,8 @@ const config: Config = {
       "hero-bg": "url('/assets/images/hero-bg.png')",
       "hero-bg-overlay":
         "linear-gradient(135deg, rgba(82,71,151,1) 0%, rgba(95,83,171,1) 10%, rgba(247,247,251,1) 100%)",
+      "special-offer":
+        "linear-gradient(45deg, rgba(184, 107, 248, 1) 0%,  rgba(127, 93, 217, 1) 100%)",
     },
     fontSize: {
       xs: "12px",
@@ -90,6 +92,7 @@ const config: Config = {
       "6xl": "32px",
       "7xl": "36px",
     },
+
     extend: {},
   },
   plugins: [daisyui],

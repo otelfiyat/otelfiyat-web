@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { PROFILE_DROPDOWN } from "@/lib/utils/profile-dropdown";
-import Typography from "@/components/UI/Typography";
 import Link from "next/link";
+
+import { PROFILE_DROPDOWN } from "@/lib/utils/profile-dropdown";
 
 const ProfileDropdown = () => {
   return (
@@ -29,18 +29,9 @@ const ProfileDropdown = () => {
                 height={18}
                 className="mr-2"
               />
-
-              <Typography
-                variant="span"
-                fs={{
-                  mobile: "title2",
-                  tablet: "title2",
-                  desktop: "title2",
-                }}
-                className="text-brand-neutral-800 text-nowrap"
-              >
+              <span className="text-brand-neutral-800 text-nowrap size-title2">
                 {item.title}
-              </Typography>
+              </span>
             </Link>
           </li>
         ))}

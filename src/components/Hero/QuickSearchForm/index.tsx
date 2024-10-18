@@ -1,4 +1,3 @@
-import Typography from "@/components/UI/Typography";
 import Image from "next/image";
 
 const QuickSearchForm = () => {
@@ -12,14 +11,9 @@ const QuickSearchForm = () => {
             height={18}
             alt="Quick Search"
           />
-          <Typography
-            variant="h2"
-            fs={{ mobile: "body1", tablet: "title2", desktop: "title2" }}
-            fw="semibold"
-            className="text-brand-primary-500 text-start"
-          >
+          <h2 className="text-brand-primary-500 text-start size-body1 sm:size-title2 font-semibold ">
             Hayalindeki Tatili Planla!
-          </Typography>
+          </h2>
         </div>
       </div>
     </section>

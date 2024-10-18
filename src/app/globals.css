@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .size-h1 {
+    @apply text-7xl;
+  }
+  .size-h2 {
+    @apply text-6xl;
+  }
+  .size-h3 {
+    @apply text-5xl;
+  }
+  .size-h4 {
+    @apply text-4xl;
+  }
+  .size-h5 {
+    @apply text-3xl;
+  }
+  .size-h6 {
+    @apply text-2xl;
+  }
+  .size-title1 {
+    @apply text-xl;
+  }
+  .size-title2 {
+    @apply text-lg;
+  }
+  .size-body1 {
+    @apply text-base;
+  }
+  .size-body2 {
+    @apply text-sm;
+  }
+  .size-caption {
+    @apply text-xs;
+  }
+
+  .size-btn {
+    @apply max-h-10 min-h-10 mt-2 font-medium size-body1 text-nowrap;
+  }
+}
