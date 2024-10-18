@@ -20,9 +20,13 @@ const NavigationBar = () => {
           <Link href={navItem.href} key={navItem.label}>
             <li>
               <Typography
-                variant="body1"
-                fontWeight="semibold"
-                type="span"
+                variant="span"
+                fs={{
+                  mobile: "body1",
+                  tablet: "body1",
+                  desktop: "body1",
+                }}
+                fw="semibold"
                 className={` hover:text-brand-primary-600 cursor-pointer transition-colors ${
                   isActive(navItem.href)
                     ? "text-brand-primary-600 border-l-2 border-brand-primary-600 pl-1"

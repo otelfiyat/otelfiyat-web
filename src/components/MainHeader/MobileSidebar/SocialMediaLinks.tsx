@@ -7,9 +7,8 @@ const SocialMediaLinks = () => {
   return (
     <>
       {SOCIAL_LINKS.map((link) => (
-        <li>
+        <li key={link.label}>
           <Link
-            key={link.label}
             href={link.href}
             className="flex items-center gap-1 cursor-pointer"
           >
@@ -20,10 +19,14 @@ const SocialMediaLinks = () => {
               height={24}
             />
             <Typography
-              variant="body2"
-              type="span"
-              fontWeight="medium"
-              className="text-neutral-900"
+              variant="span"
+              fs={{
+                mobile: "body2",
+                tablet: "body2",
+                desktop: "body2",
+              }}
+              fw="medium"
+              className="text-neutral-700"
             >
               {link.label}
             </Typography>
