@@ -17,7 +17,7 @@ const HeroTitle = () => {
       >
         {HERO_TITLE.subtitle}
       </Typography>
-      <button className="btn w-48 max-h-10 min-h-10">
+      <button className="btn w-48 max-h-10 min-h-10 mt-2">
         <Typography
           variant="span"
           fw="semibold"

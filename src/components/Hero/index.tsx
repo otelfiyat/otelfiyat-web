@@ -20,8 +20,8 @@ const Hero = () => {
         </Typography>
       </div>
       <section className="hero min-h-screen overflow-hidden sm:min-h-96 sm:h-fit sm:rounded-xl">
-        <div className="hero-overlay bg-hero-bg-overlay"/>
-        <div className="container flex flex-col gap-4 w-full h-full py-5 sm:flex-row md:px-12 lg:px-18">
+        <div className="hero-overlay bg-hero-bg-overlay" />
+        <div className="container flex flex-col gap-4 w-full h-full py-5 sm:flex-row md:px-12 lg:px-18 bg-hero-bg bg-cover bg-center bg-no-repeat">
           <HeroTitle />
           <QuickSearchForm />
         </div>
