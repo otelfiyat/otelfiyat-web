@@ -12,7 +12,7 @@ const HeroTitle = () => {
       </h1>
       <Typography
         variant="h2"
-        fs={{ mobile: "body2", tablet: "body2", desktop: "body1" }}
+        fs={{ mobile: "body2", tablet: "body2", desktop: "h3" }}
         className="text-brand-white text-start leading-relaxed"
       >
         {HERO_TITLE.subtitle}
