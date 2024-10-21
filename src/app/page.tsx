@@ -1,6 +1,11 @@
-import { Hero, SpecialOffersSlider } from "@/components";
-import FeaturedHotels from "@/components/FeaturedHotels";
-import HolidayThemes from "@/components/HolidayThemes";
+import {
+  Hero,
+  SpecialOffersSlider,
+  FeaturedHotels,
+  HolidayThemes,
+  PopularLocations,
+} from "@/components";
+
 import { FeaturedHotel } from "@/lib/types/featured-hotel";
 
 //TODO: SpecialOffers need to be fetched from an API
@@ -164,6 +169,7 @@ const featuredHotels: FeaturedHotel[] = [
   },
 ]; // 8 hotels
 
+//TODO: HolidayThemes need to be fetched from an API
 const holidayThemes = [
   {
     title: "Ekonomik Oteller",
@@ -192,6 +198,29 @@ const holidayThemes = [
   },
 ];
 
+const popularLocations = [
+  {
+    location: "Marmaris, Muğla",
+    image:
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    location: "Kemer, Antalya",
+    image:
+      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    location: "Alanya, Antalya",
+    image:
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    location: "Marmaris, Muğla",
+    image:
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+]; // 4 locations
+
 const Homepage = () => {
   return (
     <main className="flex flex-col h-[3000px]">
@@ -199,6 +228,7 @@ const Homepage = () => {
       <SpecialOffersSlider specialOffers={specialOffers} />
       <FeaturedHotels featuredHotels={featuredHotels} />
       <HolidayThemes themes={holidayThemes} />
+      <PopularLocations locations={popularLocations} />
     </main>
   );
 };

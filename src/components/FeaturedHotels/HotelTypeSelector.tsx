@@ -45,7 +45,7 @@ const HotelTypeSelector = () => {
           {FEATURURED_HOTELS_TYPE.map((hotelType) => (
             <button
               key={hotelType.value}
-              className={`btn btn-primary  size-btn ${
+              className={`btn btn-primary size-btn ${
                 selectedHotelType === hotelType.value
                   ? "btn-primary-active"
                   : "btn-outline"
