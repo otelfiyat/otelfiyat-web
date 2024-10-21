@@ -2,12 +2,27 @@
 
 import { FEATURURED_HOTELS_TYPE } from "@/lib/utils/featured-hotels-type";
 import ShowMoreButton from "./ShowMoreButton";
+import { useState } from "react";
 
 interface HotelTypeSelectorProps {
   children: React.ReactNode;
 }
 
 const HotelTypeSelector = ({ children }: HotelTypeSelectorProps) => {
+  const [selectedHotelType, setSelectedHotelType] = useState(
+    FEATURURED_HOTELS_TYPE[0].value
+  );
+
+  const handleHotelTypeChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    setSelectedHotelType(event.target.value);
+  };
+
+  const handleShowMore = () => {
+    console.log("Show more");
+  };
+
   return (
     <section className="flex flex-col gap-2 min-h-screen">
       <select
@@ -20,6 +35,8 @@ const HotelTypeSelector = ({ children }: HotelTypeSelectorProps) => {
           background:
             "url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM3NTZDQUMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8cG9seWxpbmUgcG9pbnRzPSI2IDkgMTIgMTUgMTggOSI+PC9wb2x5bGluZT4KPC9zdmc+Cg==) no-repeat right 1rem center/1.5rem 1.5rem",
         }}
+        value={selectedHotelType}
+        onChange={handleHotelTypeChange}
       >
         {FEATURURED_HOTELS_TYPE.map((hotelType) => (
           <option key={hotelType.value} value={hotelType.value}>
@@ -32,19 +49,23 @@ const HotelTypeSelector = ({ children }: HotelTypeSelectorProps) => {
           {FEATURURED_HOTELS_TYPE.map((hotelType) => (
             <button
               key={hotelType.value}
-              className="btn btn-primary btn-outline size-btn"
-              type="button"
+              className={`btn btn-primary  size-btn ${
+                selectedHotelType === hotelType.value
+                  ? "btn-primary-active"
+                  : "btn-outline"
+              }`}
+              onClick={() => setSelectedHotelType(hotelType.value)}
             >
               {hotelType.label}
             </button>
           ))}
         </div>
-        <ShowMoreButton className="hidden lg:flex" onClick={() => {}} />
+        <ShowMoreButton className="hidden lg:flex" onClick={handleShowMore} />
       </div>
       {children}
       <ShowMoreButton
         className="hidden sm:flex items-center gap-1 lg:hidden"
-        onClick={() => {}}
+        onClick={handleShowMore}
       />
     </section>
   );
