@@ -38,6 +38,6 @@
   }
 
   .size-btn {
-    @apply max-h-10 min-h-10 mt-2 font-medium size-body1 text-nowrap;
+    @apply max-h-10 min-h-10 text-nowrap;
   }
 }

@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className={inter.className}>
-      <body>
+      <body className="bg-brand-neutral-50">
         <MainHeader />
         {children}
       </body>
