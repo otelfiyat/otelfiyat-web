@@ -4,11 +4,7 @@ import { FEATURURED_HOTELS_TYPE } from "@/lib/utils/featured-hotels-type";
 import ShowMoreButton from "./ShowMoreButton";
 import { useState } from "react";
 
-interface HotelTypeSelectorProps {
-  children: React.ReactNode;
-}
-
-const HotelTypeSelector = ({ children }: HotelTypeSelectorProps) => {
+const HotelTypeSelector = () => {
   const [selectedHotelType, setSelectedHotelType] = useState(
     FEATURURED_HOTELS_TYPE[0].value
   );
@@ -24,9 +20,9 @@ const HotelTypeSelector = ({ children }: HotelTypeSelectorProps) => {
   };
 
   return (
-    <section className="flex flex-col gap-2 min-h-screen">
+    <section className="flex flex-col gap-2">
       <select
-        className="select select-primary w-[230px] border-2 text-brand-primary-400 size-body1 font-medium sm:hidden"
+        className="select select-primary w-[230px] text-brand-primary-500 size-body1 font-semibold sm:hidden"
         style={{
           appearance: "none",
           WebkitAppearance: "none",
@@ -60,13 +56,8 @@ const HotelTypeSelector = ({ children }: HotelTypeSelectorProps) => {
             </button>
           ))}
         </div>
-        <ShowMoreButton className="hidden lg:flex" onClick={handleShowMore} />
+        <ShowMoreButton className="hidden 2xl:flex" onClick={handleShowMore} />
       </div>
-      {children}
-      <ShowMoreButton
-        className="hidden sm:flex items-center gap-1 lg:hidden"
-        onClick={handleShowMore}
-      />
     </section>
   );
 };

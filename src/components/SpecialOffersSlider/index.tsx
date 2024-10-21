@@ -18,7 +18,7 @@ interface SpecialOffersSliderProps {
 
 const SpecialOffersSlider = ({ specialOffers }: SpecialOffersSliderProps) => {
   return (
-    <section className="my-8">
+    <section className="my-10">
       <Swiper
         modules={[Autoplay]}
         autoplay={{

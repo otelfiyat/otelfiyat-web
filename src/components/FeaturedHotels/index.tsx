@@ -8,9 +8,10 @@ interface FeaturedHotelsProps {
 
 const FeaturedHotels = ({ featuredHotels }: FeaturedHotelsProps) => {
   return (
-    <HotelTypeSelector>
+    <section className="flex flex-col gap-2 min-h-screen">
+      <HotelTypeSelector />
       <FeaturedHotelsSlider featuredHotels={featuredHotels} />
-    </HotelTypeSelector>
+    </section>
   );
 };
 

@@ -69,7 +69,7 @@ const config: Config = {
         sm: "1rem",
         lg: "1rem",
         xl: "3rem",
-        "2xl": "8rem",
+        "2xl": "7rem",
       },
     },
     backgroundImage: {

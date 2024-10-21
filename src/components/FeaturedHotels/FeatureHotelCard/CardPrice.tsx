@@ -15,8 +15,8 @@ const CardPrice = ({ overlinedPrice, price, striking }: FeaturedHotel) => {
   striking.color === "secondary" ? "btn-secondary" : "btn-primary";
 
   return (
-    <div className="flex items-center gap-1">
-      <div className="w-1/2 flex flex-col gap-1">
+    <div className="flex items-center justify-between gap-1">
+      <div className="flex flex-col gap-1">
         <span className="size-caption text-brand-neutral-800 line-through">
           {overlinedPrice} ₺
         </span>
@@ -24,7 +24,7 @@ const CardPrice = ({ overlinedPrice, price, striking }: FeaturedHotel) => {
           {price} ₺
         </h4>
       </div>
-      <div className="w-1/2 flex flex-col gap-1">
+      <div className="flex flex-col gap-1">
         <button className={`btn size-btn text-brand-white ${variant}`}>
           {striking.text}
         </button>
