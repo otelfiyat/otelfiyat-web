@@ -1,4 +1,5 @@
 import { Hero, SpecialOffersSlider } from "@/components";
+import FeaturedHotels from "@/components/FeaturedHotels";
 
 //TODO: SpecialOffers need to be fetched from an API
 const specialOffers = [
@@ -26,6 +27,7 @@ const Homepage = () => {
     <main className="container flex flex-col">
       <Hero />
       <SpecialOffersSlider specialOffers={specialOffers} />
+      <FeaturedHotels />
     </main>
   );
 };
