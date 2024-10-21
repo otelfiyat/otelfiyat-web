@@ -11,8 +11,10 @@ interface LocationCardProps {
 const LocationCard = ({ location, order }: LocationCardProps) => {
   const additionalClasses =
     order === 1
-      ? "sm:col-span-2 sm:row-span-3 sm:h-[470px]"
-      : "sm:mb-[10px] sm:h-[150px]";
+      ? "sm:col-span-2 sm:row-span-3 sm:h-[470px] lg:h-[550px] lg:col-span-1 lg:row-span-2"
+      : order === 4
+      ? "sm:mb-[10px] sm:h-[150px] lg:h-[270px] lg:col-span-2"
+      : "sm:mb-[10px] sm:h-[150px] lg:h-[270px]";
 
   return (
     <div
