@@ -43,7 +43,11 @@ const SpecialOffersSlider = ({ specialOffers }: SpecialOffersSliderProps) => {
             spaceBetween: 0,
           },
           1400: {
-            slidesPerView: 6.5,
+            slidesPerView: 6,
+            spaceBetween: 0,
+          },
+          1536: {
+            slidesPerView: 7,
             spaceBetween: 0,
           },
         }}
