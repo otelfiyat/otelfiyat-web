@@ -1,5 +1,6 @@
 import { Hero, SpecialOffersSlider } from "@/components";
 import FeaturedHotels from "@/components/FeaturedHotels";
+import HolidayThemes from "@/components/HolidayThemes";
 import { FeaturedHotel } from "@/lib/types/featured-hotel";
 
 //TODO: SpecialOffers need to be fetched from an API
@@ -163,12 +164,41 @@ const featuredHotels: FeaturedHotel[] = [
   },
 ]; // 8 hotels
 
+const holidayThemes = [
+  {
+    title: "Ekonomik Oteller",
+    image:
+      "https://images.unsplash.com/photo-1526996970093-36148727de98?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvdGVsJTIwZXVyb3BlfGVufDB8MXwwfHx8MA%3D%3D",
+  },
+  {
+    title: "Balayı Otelleri",
+    image:
+      "https://images.unsplash.com/photo-1694125852939-1267174f2770?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGhvdGVsJTIwZXVyb3BlfGVufDB8MXwwfHx8MA%3D%3D",
+  },
+  {
+    title: "Termal Oteller",
+    image:
+      "https://images.unsplash.com/photo-1630665425312-37a2c337694b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "Şehir Otelleri",
+    image:
+      "https://images.unsplash.com/photo-1654086317502-531c0d05919b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGhvdGVsJTIwZXVyb3BlfGVufDB8MXwwfHx8MA%3D%3D",
+  },
+  {
+    title: "5 Yıldızlı Oteller",
+    image:
+      "https://images.unsplash.com/photo-1549294413-26f195200c16?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
+
 const Homepage = () => {
   return (
-    <main className="container flex flex-col">
+    <main className="flex flex-col h-[3000px]">
       <Hero />
       <SpecialOffersSlider specialOffers={specialOffers} />
       <FeaturedHotels featuredHotels={featuredHotels} />
+      <HolidayThemes themes={holidayThemes} />
     </main>
   );
 };
