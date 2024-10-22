@@ -4,6 +4,7 @@ import {
   FeaturedHotels,
   HolidayThemes,
   PopularLocations,
+  BottomCards,
 } from "@/components";
 
 import { FeaturedHotel } from "@/lib/types/featured-hotel";
@@ -229,6 +230,7 @@ const Homepage = () => {
       <FeaturedHotels featuredHotels={featuredHotels} />
       <HolidayThemes themes={holidayThemes} />
       <PopularLocations locations={popularLocations} />
+      <BottomCards />
     </main>
   );
 };
