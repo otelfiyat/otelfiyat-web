@@ -4,6 +4,7 @@ import {
   FeaturedHotels,
   HolidayThemes,
   PopularLocations,
+  BottomCards,
 } from "@/components";
 
 import { FeaturedHotel } from "@/lib/types/featured-hotel";
@@ -223,12 +224,13 @@ const popularLocations = [
 
 const Homepage = () => {
   return (
-    <main className="flex flex-col h-[3000px]">
+    <main className="flex flex-col">
       <Hero />
       <SpecialOffersSlider specialOffers={specialOffers} />
       <FeaturedHotels featuredHotels={featuredHotels} />
       <HolidayThemes themes={holidayThemes} />
       <PopularLocations locations={popularLocations} />
+      <BottomCards />
     </main>
   );
 };

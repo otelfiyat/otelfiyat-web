@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { MainHeader } from "@/components";
+import { MainHeader, MainFooter } from "@/components";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,6 +23,7 @@ export default function RootLayout({
       <body className="bg-brand-neutral-50">
         <MainHeader />
         {children}
+        <MainFooter />
       </body>
     </html>
   );

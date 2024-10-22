@@ -10,7 +10,7 @@ interface PopularLocationsProps {
 
 const PopularLocations = ({ locations }: PopularLocationsProps) => {
   return (
-    <section className="container flex flex-col gap-3">
+    <section className="container flex flex-col gap-3 select-none">
       <h2 className="font-bold size-h5 text-brand-primary-700">
         Popüler Bölgeler
       </h2>
