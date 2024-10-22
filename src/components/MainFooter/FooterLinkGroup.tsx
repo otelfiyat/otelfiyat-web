@@ -15,7 +15,7 @@ interface FooterLinksProps {
 
 const FooterLinkGroup = ({ title, links, showTitle }: FooterLinkGroupProps) => {
   return (
-    <ul className="flex flex-col gap-2">
+    <ul className="flex flex-col gap-2 pt-6">
       {showTitle && (
         <li className="font-semibold size-body1 text-brand-neutral-900">
           {title}
@@ -59,7 +59,7 @@ const FooterLinks = ({ title, links }: FooterLinksProps) => {
           name="my-accordion-2"
           defaultChecked={title === "İletişim"}
         />
-        <div className="collapse-title font-semibold size-body1 text-brand-neutral-900 border-b border-brand-primary-50 mb-2">
+        <div className="collapse-title font-semibold size-body2 text-brand-neutral-900 border-b border-brand-primary-50">
           {title}
         </div>
         <div className="collapse-content">

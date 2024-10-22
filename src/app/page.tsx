@@ -224,7 +224,7 @@ const popularLocations = [
 
 const Homepage = () => {
   return (
-    <main className="flex flex-col pb-24">
+    <main className="flex flex-col">
       <Hero />
       <SpecialOffersSlider specialOffers={specialOffers} />
       <FeaturedHotels featuredHotels={featuredHotels} />

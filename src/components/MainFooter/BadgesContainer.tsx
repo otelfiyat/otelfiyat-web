@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const BadgesContainer = () => {
   return (
-    <div className="flex flex-wrap items-start justify-between gap-4 py-5">
+    <div className="flex flex-wrap items-center justify-between gap-4 py-5 border-t border-brand-primary-50">
       <div className="flex items-center gap-2">
         <Image
           src="/assets/images/payments.svg"

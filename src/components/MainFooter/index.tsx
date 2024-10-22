@@ -9,7 +9,7 @@ import FooterBottom from "./FooterBottom";
 
 const MainFooter = () => {
   return (
-    <footer className="bg-brand-white pt-8 pb-[2000px]">
+    <footer className="bg-brand-white pt-2 mt-8">
       <div className="container mx-auto flex flex-col">
         <div className="flex justify-between items-center lg:hidden">
           <BrandLogo />
