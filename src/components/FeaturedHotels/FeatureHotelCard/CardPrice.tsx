@@ -11,8 +11,7 @@ const CardPrice = ({ overlinedPrice, price, striking }: FeaturedHotel) => {
       : striking.color === "info"
       ? "btn-info"
       : "btn-primary";
-  striking.color === "secondary" ? "btn-secondary" : "btn-primary";
-
+  
   return (
     <div className="flex items-center justify-between gap-1">
       <div className="flex flex-col">
