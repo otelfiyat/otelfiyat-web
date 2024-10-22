@@ -1,8 +1,10 @@
 import Image from "next/image";
-import { FeaturedHotel } from "@/lib/types/featured-hotel";
+
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import { HeartIcon as Unliked } from "@heroicons/react/24/outline";
 import { HeartIcon as Liked } from "@heroicons/react/24/solid";
+
+import { FeaturedHotel } from "@/lib/types/featured-hotel";
 
 const CardImage = ({ image, title, tag, like }: FeaturedHotel) => {
   return (

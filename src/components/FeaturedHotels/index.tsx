@@ -1,6 +1,6 @@
-import { FeaturedHotel } from "@/lib/types/featured-hotel";
 import FeaturedHotelsSlider from "./FeaturedHotelsSlider";
 import HotelTypeSelector from "./HotelTypeSelector";
+import { FeaturedHotel } from "@/lib/types/featured-hotel";
 
 interface FeaturedHotelsProps {
   featuredHotels: FeaturedHotel[];
