@@ -13,12 +13,12 @@ const LocationCard = ({ location, order }: LocationCardProps) => {
     order === 1
       ? "sm:col-span-2 sm:row-span-3 sm:h-[470px] lg:h-[550px] lg:col-span-1 lg:row-span-2"
       : order === 4
-      ? "sm:mb-[10px] sm:h-[150px] lg:h-[270px] lg:col-span-2"
-      : "sm:mb-[10px] sm:h-[150px] lg:h-[270px]";
+      ? "sm:mb-[16px] sm:h-[146px] lg:h-[266px] lg:col-span-2"
+      : "sm:mb-[16px] sm:h-[146px] lg:h-[266px]";
 
   return (
     <div
-      className={`relative w-full h-[200px]  rounded-xl overflow-hidden ${additionalClasses}`}
+      className={`relative w-full h-[200px] rounded-xl shadow overflow-hidden ${additionalClasses}`}
     >
       <Image
         src={location.image}

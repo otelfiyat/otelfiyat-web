@@ -1,4 +1,5 @@
 "use client";
+import { useRef } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -11,7 +12,6 @@ import ThemeCard from "./ThemeCard";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
-import { useRef } from "react";
 
 interface ThemesCardsSliderProps {
   themes: {

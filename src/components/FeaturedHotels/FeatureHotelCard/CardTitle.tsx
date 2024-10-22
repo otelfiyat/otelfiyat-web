@@ -1,5 +1,6 @@
-import { FeaturedHotel } from "@/lib/types/featured-hotel";
 import { MapPinIcon, StarIcon } from "@heroicons/react/24/solid";
+
+import { FeaturedHotel } from "@/lib/types/featured-hotel";
 
 const CardTitle = ({ location, star, title, features }: FeaturedHotel) => {
   return (

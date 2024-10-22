@@ -1,8 +1,8 @@
 "use client";
-
-import { FEATURURED_HOTELS_TYPE } from "@/lib/utils/featured-hotels-type";
-import ShowMoreButton from "./ShowMoreButton";
 import { useState } from "react";
+
+import ShowMoreButton from "./ShowMoreButton";
+import { FEATURURED_HOTELS_TYPE } from "@/lib/utils/featured-hotels-type";
 
 const HotelTypeSelector = () => {
   const [selectedHotelType, setSelectedHotelType] = useState(
