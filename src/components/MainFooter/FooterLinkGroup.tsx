@@ -23,7 +23,7 @@ const FooterLinkGroup = ({ title, links, showTitle }: FooterLinkGroupProps) => {
         </li>
       )}
       {links.map((link) => (
-        <li key={link.url}>
+        <li key={link.label}>
           {link.icon ? (
             <a
               href={link.url}
