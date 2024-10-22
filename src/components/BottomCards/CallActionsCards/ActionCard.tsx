@@ -16,7 +16,7 @@ const ActionCard = ({ title, button, icon }: ActionCardProps) => {
           height={64}
           alt={icon}
         />
-        <h2 className="font-medium size-body2 lg:size-body1 xl:size-title1 text-brand-neutral-900">
+        <h2 className="font-medium size-body2 lg:size-body1 xl:size-title2 text-brand-neutral-900">
           {title}
         </h2>
       </div>

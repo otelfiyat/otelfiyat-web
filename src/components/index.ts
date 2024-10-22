@@ -5,6 +5,7 @@ import FeaturedHotels from "./FeaturedHotels";
 import HolidayThemes from "./HolidayThemes";
 import PopularLocations from "./PopularLocations";
 import BottomCards from "./BottomCards";
+import MainFooter from "./MainFooter";
 
 export {
   MainHeader,
@@ -14,4 +15,5 @@ export {
   HolidayThemes,
   PopularLocations,
   BottomCards,
+  MainFooter,
 };
