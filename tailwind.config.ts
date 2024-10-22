@@ -78,6 +78,8 @@ const config: Config = {
         "linear-gradient(135deg, rgba(82,71,151,1) 0%, rgba(95,83,171,1) 10%, rgba(247,247,251,1) 100%)",
       "special-offer":
         "linear-gradient(45deg, rgba(184, 107, 248, 1) 0%,  rgba(127, 93, 217, 1) 100%)",
+      "loading-bg":
+        "linear-gradient(315deg, rgba(201,198,223,1) 0%, rgba(175,170,207,1) 50%)",
       "theme-title-marker": "url('/assets/icons/theme-title-marker.svg')",
       "holiday-themes-bg": "url('/assets/images/holiday-themes-bg.png')",
     },

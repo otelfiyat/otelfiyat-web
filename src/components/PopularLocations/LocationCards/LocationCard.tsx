@@ -20,12 +20,7 @@ const LocationCard = ({ location, order }: LocationCardProps) => {
     <div
       className={`relative w-full h-[200px] rounded-xl shadow overflow-hidden ${additionalClasses}`}
     >
-      <Image
-        src={location.image}
-        alt={location.location}
-        fill
-        objectFit="cover"
-      />
+      <Image src={location.image} alt={location.location} fill />
       <span className="absolute top-2 left-2 bg-brand-white bg-opacity-80 rounded px-2 py-1 text-brand-primary-700 font-semibold size-caption">
         {location.location}
       </span>

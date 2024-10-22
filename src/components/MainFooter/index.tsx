@@ -18,6 +18,7 @@ const MainFooter = () => {
           <div className="flex gap-2">
             {SOCIAL_LINKS.map((link) => (
               <Link
+                key={link.icon}
                 href={link.href}
                 className="flex items-center gap-1 cursor-pointer"
               >
