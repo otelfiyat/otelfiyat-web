@@ -33,6 +33,22 @@ export const FOOTER_LINKS = [
     ],
   },
   {
+    title: "Sosyal Medya",
+    links: [
+      {
+        icon: "facebook",
+        label: "Facebook",
+        url: "https://www.facebook.com/otelfiyat",
+      },
+
+      {
+        icon: "instagram",
+        label: "Instagram",
+        url: "https://www.instagram.com/otelfiyat",
+      },
+    ],
+  },
+  {
     title: "İletişim",
     links: [
       {
