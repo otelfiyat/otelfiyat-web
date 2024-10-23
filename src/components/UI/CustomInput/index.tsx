@@ -29,7 +29,7 @@ const CustomInput = ({
     type === "password" ? (isPasswordVisible ? "text" : "password") : type;
 
   return (
-    <label className="relative form-control w-full max-w-[430px]">
+    <label className="relative form-control w-full max-w-[640px]">
       <div className="label pt-0">
         <span className="font-medium size-body1 text-brand-neutral-900">
           {label}
@@ -39,7 +39,7 @@ const CustomInput = ({
         {...register(name)}
         type={inputType}
         name={name}
-        className={`input input-bordered w-full max-w-[430px] ${
+        className={`input input-bordered w-full max-w-[640px] ${
           error ? "input-error" : ""
         }`}
         placeholder={placeholder}

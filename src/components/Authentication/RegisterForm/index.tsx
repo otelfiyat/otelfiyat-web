@@ -1,19 +1,24 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 
-import LoginFormTitle from "./LoginFormTitle";
 import { CustomDialog, CustomInput } from "@/components/UI";
 
 import useHandleForm from "./useHandleForm";
+import RegisterFormTitle from "./RegisterFormTitle";
 
-interface LoginFormProps {
+interface RegisterFormProps {
   isOpen: boolean;
   toggle: () => void;
   onRequestClose: () => void;
 }
 
-const LoginForm = ({ isOpen, onRequestClose, toggle }: LoginFormProps) => {
+const RegisterForm = ({
+  isOpen,
+  onRequestClose,
+  toggle,
+}: RegisterFormProps) => {
   const { form, onSubmit } = useHandleForm();
 
   const {
@@ -32,7 +37,15 @@ const LoginForm = ({ isOpen, onRequestClose, toggle }: LoginFormProps) => {
         className="p-4 flex flex-col gap-3 sm:w-[430px]"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <LoginFormTitle />
+        <RegisterFormTitle />
+        <CustomInput
+          register={register}
+          type="text"
+          name="name"
+          label="İsim Soyisim"
+          placeholder="İsim ve soyisminizi giriniz."
+          error={errors.name?.message ?? ""}
+        />
         <CustomInput
           register={register}
           type="email"
@@ -43,42 +56,61 @@ const LoginForm = ({ isOpen, onRequestClose, toggle }: LoginFormProps) => {
         />
         <CustomInput
           register={register}
+          type="number"
+          name="phoneNumber"
+          label="Telefon Numarası"
+          placeholder="Telefon numaranızı giriniz."
+          error={errors.phoneNumber?.message ?? ""}
+        />
+        <CustomInput
+          register={register}
           type="password"
           name="password"
           label="Şifre"
           placeholder="Şifrenizi giriniz."
           error={errors.password?.message ?? ""}
         />
-        <div className="flex items-center justify-between">
+        <CustomInput
+          register={register}
+          type="password"
+          name="password2"
+          label="Şifre Tekrarı"
+          placeholder="Şifrenizi tekrar giriniz."
+          error={errors.password2?.message ?? ""}
+        />
+        <div className="flex items-center justify-start">
           <div className="form-control">
-            <label className="cursor-pointer label ">
+            <label className="cursor-pointer label items-start">
               <input type="checkbox" className="checkbox checkbox-secondary" />
               <span className="label-text size-body2 text-brand-neutral-800 ms-2">
-                Beni Hatırla
+                <Link
+                  href="/sozlesmeler/uyelik-sozlesmesi"
+                  className="text-brand-blue"
+                >
+                  Üyelik sözleşmesini
+                </Link>
+                {" ve "}
+                <Link
+                  href="/sozlesmeler/kvkk-aydinlatma-metni"
+                  className="text-brand-blue"
+                >
+                  Kvkk Aydınlatma Metni
+                </Link>
+                ni kabul ediyorum.
               </span>
             </label>
           </div>
-          <span className="size-body2 text-brand-primary-500">
-            Şifremi Unuttum
-          </span>
         </div>
         <button
           className="btn btn-secondary size-title2 text-brand-primary-700"
           type="submit"
         >
-          Giriş Yap
+          Üye Ol
         </button>
       </form>
       <div className="flex flex-col gap-3">
         <div className="divider">veya</div>
         <div className="flex justify-center gap-3">
-          <Image
-            className="cursor-pointer hover:opacity-80"
-            src="/assets/icons/login-phone.svg"
-            alt="telefon ile giriş yap"
-            width={48}
-            height={48}
-          />
           <Image
             className="cursor-pointer hover:opacity-80"
             src="/assets/icons/login-google.svg"
@@ -96,10 +128,10 @@ const LoginForm = ({ isOpen, onRequestClose, toggle }: LoginFormProps) => {
         </div>
         <div className="flex justify-center items-center my-4">
           <span className="size-body1 text-brand-neutral-800">
-            Hesabınız yok mu?
+            Zaten hesabın var mı?
           </span>
           <span className="font-semibold size-body1 text-brand-primary-500 ms-1 cursor-pointer">
-            Kayıt Ol!
+            Giriş Yap!
           </span>
         </div>
       </div>
@@ -107,4 +139,4 @@ const LoginForm = ({ isOpen, onRequestClose, toggle }: LoginFormProps) => {
   );
 };
 
-export default LoginForm;
+export default RegisterForm;

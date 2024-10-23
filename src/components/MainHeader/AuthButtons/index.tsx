@@ -1,6 +1,6 @@
 "use client";
 
-import { LoginForm } from "@/components/Authentication";
+import { LoginForm, RegisterForm } from "@/components/Authentication";
 
 import useDialog from "./useDialog";
 
@@ -13,9 +13,9 @@ const AuthButtons = () => {
   } = useDialog();
 
   const {
-    // isOpen: isRegisterModalOpen,
-    // toggle: toggleRegisterModal,
-    // onRequestClose: onRequestCloseRegisterModal,
+    isOpen: isRegisterModalOpen,
+    toggle: toggleRegisterModal,
+    onRequestClose: onRequestCloseRegisterModal,
     onClick: onClickRegisterButton,
   } = useDialog();
 
@@ -37,6 +37,11 @@ const AuthButtons = () => {
         isOpen={isLoginModalOpen}
         toggle={toggleLoginModal}
         onRequestClose={onRequestCloseLoginModal}
+      />
+      <RegisterForm
+        isOpen={isRegisterModalOpen}
+        toggle={toggleRegisterModal}
+        onRequestClose={onRequestCloseRegisterModal}
       />
     </>
   );

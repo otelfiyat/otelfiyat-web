@@ -3,22 +3,25 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
-  LoginForm,
-  loginFormSchema,
+  RegisterForm,
+  registerFormSchema,
 } from "@/lib/schemas/authentication-schemas";
 
 const useHandleForm = () => {
-  const form = useForm<LoginForm>({
-    resolver: zodResolver(loginFormSchema),
+  const form = useForm({
+    resolver: zodResolver(registerFormSchema),
     defaultValues: {
+      name: "",
       email: "",
+      phoneNumber: "",
       password: "",
+      password2: "",
     },
   });
 
-  const onSubmit: SubmitHandler<LoginForm> = (formData: LoginForm) => {
+  const onSubmit: SubmitHandler<RegisterForm> = (formData) => {
+    //TODO: Handle register form submission
     console.log(formData);
-    //TODO: Handle login form submission
   };
 
   return { form, onSubmit };

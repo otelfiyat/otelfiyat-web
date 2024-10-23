@@ -17,7 +17,7 @@ const useDialog = () => {
     ) as HTMLInputElement;
 
     if (sidebar) {
-      sidebar.click();
+      sidebar.checked = false;
     }
   };
 
