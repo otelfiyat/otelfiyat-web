@@ -1,5 +1,5 @@
 export const getHomepageData = async () => {
-  const url = process.env.NEXT_PUBLIC_BASE_API_URL + "homepage";
+  const url = process.env.NEXT_PUBLIC_BASE_API_URL + "/homepage";
 
   try {
     const response = await fetch(url);
