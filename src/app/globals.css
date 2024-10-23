@@ -40,4 +40,12 @@
   .size-btn {
     @apply max-h-10 min-h-10 text-nowrap;
   }
+
+  .custom-modal-overlay {
+    @apply bg-brand-black bg-opacity-50 fixed inset-0 z-50 flex justify-center items-center;
+  }
+
+  .custom-modal {
+    @apply bg-brand-white rounded-lg shadow-lg min-w-[330px] min-h-48;
+  }
 }
