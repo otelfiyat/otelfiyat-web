@@ -12,12 +12,14 @@ interface RegisterFormProps {
   isOpen: boolean;
   toggle: () => void;
   onRequestClose: () => void;
+  switchModals: () => void;
 }
 
 const RegisterForm = ({
   isOpen,
   onRequestClose,
   toggle,
+  switchModals,
 }: RegisterFormProps) => {
   const { form, onSubmit } = useHandleForm();
 
@@ -107,9 +109,9 @@ const RegisterForm = ({
         >
           Üye Ol
         </button>
+        <div className="divider">veya</div>
       </form>
       <div className="flex flex-col gap-3">
-        <div className="divider">veya</div>
         <div className="flex justify-center gap-3">
           <Image
             className="cursor-pointer hover:opacity-80"
@@ -130,7 +132,10 @@ const RegisterForm = ({
           <span className="size-body1 text-brand-neutral-800">
             Zaten hesabın var mı?
           </span>
-          <span className="font-semibold size-body1 text-brand-primary-500 ms-1 cursor-pointer">
+          <span
+            className="font-semibold size-body1 text-brand-primary-500 ms-1 cursor-pointer"
+            onClick={switchModals}
+          >
             Giriş Yap!
           </span>
         </div>

@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 
-import LoginFormTitle from "./LoginFormTitle";
+import PhoneLoginFormTitle from "./PhoneLoginFormTitle";
 import { CustomDialog, CustomInput } from "@/components/UI";
 
 import useHandleForm from "./useHandleForm";
 
-interface LoginFormProps {
+interface PhoneLoginFormProps {
   isOpen: boolean;
   toggle: () => void;
   onRequestClose: () => void;
@@ -15,13 +15,13 @@ interface LoginFormProps {
   switchLoginModals: () => void;
 }
 
-const LoginForm = ({
+const PhoneLoginForm = ({
   isOpen,
   onRequestClose,
   toggle,
   switchModals,
   switchLoginModals,
-}: LoginFormProps) => {
+}: PhoneLoginFormProps) => {
   const { form, onSubmit } = useHandleForm();
 
   const {
@@ -40,41 +40,20 @@ const LoginForm = ({
         className="p-4 flex flex-col gap-3 sm:w-[430px]"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <LoginFormTitle />
+        <PhoneLoginFormTitle />
         <CustomInput
           register={register}
-          type="email"
-          name="email"
-          label="E-posta Adresi"
-          placeholder="E-posta adresinizi giriniz."
-          error={errors.email?.message ?? ""}
+          type="number"
+          name="phoneNumber"
+          label="Telefon Numarası"
+          placeholder="Telefon numaranızı giriniz."
+          error={errors.phoneNumber?.message ?? ""}
         />
-        <CustomInput
-          register={register}
-          type="password"
-          name="password"
-          label="Şifre"
-          placeholder="Şifrenizi giriniz."
-          error={errors.password?.message ?? ""}
-        />
-        <div className="flex items-center justify-between">
-          <div className="form-control">
-            <label className="cursor-pointer label ">
-              <input type="checkbox" className="checkbox checkbox-secondary" />
-              <span className="label-text size-body2 text-brand-neutral-800 ms-2">
-                Beni Hatırla
-              </span>
-            </label>
-          </div>
-          <span className="size-body2 text-brand-primary-500">
-            Şifremi Unuttum
-          </span>
-        </div>
         <button
           className="btn btn-secondary size-title2 text-brand-primary-700"
           type="submit"
         >
-          Giriş Yap
+          Devam Et
         </button>
         <div className="divider">veya</div>
       </form>
@@ -82,8 +61,8 @@ const LoginForm = ({
         <div className="flex justify-center gap-3">
           <Image
             className="cursor-pointer hover:opacity-80"
-            src="/assets/icons/login-phone.svg"
-            alt="telefon ile giriş yap"
+            src="/assets/icons/login-mail.svg"
+            alt="e-posta ile giriş yap"
             width={48}
             height={48}
             onClick={switchLoginModals}
@@ -119,4 +98,4 @@ const LoginForm = ({
   );
 };
 
-export default LoginForm;
+export default PhoneLoginForm;

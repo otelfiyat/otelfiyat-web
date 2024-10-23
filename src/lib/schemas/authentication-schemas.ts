@@ -23,3 +23,10 @@ export const registerFormSchema = z
   });
 
 export type RegisterForm = z.infer<typeof registerFormSchema>;
+
+//Phone login form schema
+export const phoneLoginFormSchema = z.object({
+  phoneNumber: z.string().min(10, "Geçerli bir telefon numarası giriniz."),
+});
+
+export type PhoneLoginForm = z.infer<typeof phoneLoginFormSchema>;
