@@ -1,6 +1,7 @@
 "use client";
 
 import { LoginForm } from "@/components/Authentication";
+
 import useDialog from "./useDialog";
 
 const AuthButtons = () => {
