@@ -36,4 +36,4 @@ best deals.
 
 ## License
 
-This project is licensed under a private license. All rights reserved.
+This project is licensed under a private license. All rights reserved
