@@ -11,7 +11,7 @@ interface HolidayThemesProps {
 const HolidayThemes = ({ themes }: HolidayThemesProps) => {
   return (
     <section className="my-10 bg-holiday-themes-bg bg-center bg-cover bg-no-repeat select-none">
-      <div className="container flex flex-col gap-2 py-4 sm:flex-row sm:overflow-hidden">
+      <div className="container flex flex-col gap-2 py-4 sm:flex-row sm:overflow-hidden relative">
         <ThemesTitle />
         <ThemesCardsSlider themes={themes} />
       </div>

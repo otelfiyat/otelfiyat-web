@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
 @layer utilities {
   .size-h1 {
     @apply text-7xl;
@@ -40,4 +48,16 @@
   .size-btn {
     @apply max-h-10 min-h-10 text-nowrap;
   }
+
+  .custom-modal-overlay {
+    @apply bg-brand-black bg-opacity-50 fixed inset-0 z-50 flex justify-center items-center;
+  }
+
+  .custom-modal {
+    @apply bg-brand-white rounded-[16px] shadow-lg min-w-[330px] min-h-48 max-h-[620px] overflow-y-auto relative;
+  }
+}
+
+* {
+  scrollbar-width: thin;
 }

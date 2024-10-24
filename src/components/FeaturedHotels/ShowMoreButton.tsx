@@ -1,16 +1,17 @@
 "use client";
 
 interface ShowMoreButtonProps {
-  onClick: () => void;
   className: string;
+  text: string;
+  onClick: () => void;
 }
 
-const ShowMoreButton = ({ onClick, className }: ShowMoreButtonProps) => {
-  const classes = `btn btn-ghost text-brand-neutral-700 ${className}`;
+const ShowMoreButton = ({ className, text, onClick }: ShowMoreButtonProps) => {
+  const classes = `btn btn-ghost text-brand-neutral-900 ${className}`;
 
   return (
     <button className={classes} onClick={onClick}>
-      <span>Daha Fazla Göster</span>
+      {text}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-5 w-5"

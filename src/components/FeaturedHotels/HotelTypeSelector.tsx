@@ -2,9 +2,15 @@
 import { useState } from "react";
 
 import ShowMoreButton from "./ShowMoreButton";
+
 import { FEATURURED_HOTELS_TYPE } from "@/lib/utils/featured-hotels-type";
 
-const HotelTypeSelector = () => {
+interface HotelTypeSelectorProps {
+  showMore: boolean;
+  toggle: () => void;
+}
+
+const HotelTypeSelector = ({ showMore, toggle }: HotelTypeSelectorProps) => {
   const [selectedHotelType, setSelectedHotelType] = useState(
     FEATURURED_HOTELS_TYPE[0].value
   );
@@ -15,9 +21,7 @@ const HotelTypeSelector = () => {
     setSelectedHotelType(event.target.value);
   };
 
-  const handleShowMore = () => {
-    console.log("Show more");
-  };
+  const buttonText = showMore ? "Daha Az Göster" : "Daha Fazla Göster";
 
   return (
     <section className="flex flex-col gap-2">
@@ -56,7 +60,11 @@ const HotelTypeSelector = () => {
             </button>
           ))}
         </div>
-        <ShowMoreButton className="hidden 2xl:flex" onClick={handleShowMore} />
+        <ShowMoreButton
+          className="hidden 2xl:flex"
+          text={buttonText}
+          onClick={toggle}
+        />
       </div>
     </section>
   );
