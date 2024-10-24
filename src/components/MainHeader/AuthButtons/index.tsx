@@ -6,6 +6,7 @@ import {
   PhoneLoginForm,
   RegisterForm,
   ResetPasswordForm,
+  VerifyPhoneNumberForm,
 } from "@/components/Authentication";
 
 import useDialog from "./useDialog";
@@ -75,6 +76,13 @@ const AuthButtons = () => {
     onRequestClose: onRequestCloseResetPasswordApprovalModal,
   } = useDialog();
 
+  //Verify phone number modal
+  const {
+    isOpen: isVerifyPhoneNumberModalOpen,
+    toggle: toggleVerifyPhoneNumberModal,
+    onRequestClose: onRequestCloseVerifyPhoneNumberModal,
+  } = useDialog();
+
   return (
     <>
       <button
@@ -125,6 +133,11 @@ const AuthButtons = () => {
         onRequestClose={onRequestCloseResetPasswordApprovalModal}
         title="Şifre Sıfırlama Talebiniz Alındı"
         message="Şifre sıfırlama linki e-posta adresinize gönderildi. Linke tıklayarak şifrenizi yenileyebilirsiniz."
+      />
+      <VerifyPhoneNumberForm
+        isOpen={isVerifyPhoneNumberModalOpen}
+        toggle={toggleVerifyPhoneNumberModal}
+        onRequestClose={onRequestCloseVerifyPhoneNumberModal}
       />
     </>
   );

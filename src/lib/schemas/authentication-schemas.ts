@@ -50,3 +50,10 @@ export const resetPasswordFormSchema = z
   });
 
 export type ResetPasswordForm = z.infer<typeof resetPasswordFormSchema>;
+
+//Verify phone number form schema
+export const verifyPhoneNumberFormSchema = z.object({
+  code: z.string().length(6, "Doğrulama kodu 6 karakter olmalıdır."),
+});
+
+export type VerifyPhoneNumberForm = z.infer<typeof verifyPhoneNumberFormSchema>;
