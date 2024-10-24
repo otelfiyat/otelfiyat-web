@@ -1,14 +1,18 @@
 "use client";
 
 import {
+  ForgotPasswordForm,
   LoginForm,
   PhoneLoginForm,
   RegisterForm,
+  ResetPasswordForm,
 } from "@/components/Authentication";
 
 import useDialog from "./useDialog";
+import { CustomModal } from "@/components/UI";
 
 const AuthButtons = () => {
+  //Login modal
   const {
     isOpen: isLoginModalOpen,
     toggle: toggleLoginModal,
@@ -16,6 +20,7 @@ const AuthButtons = () => {
     onClick: onClickLoginButton,
   } = useDialog();
 
+  //Register modal
   const {
     isOpen: isRegisterModalOpen,
     toggle: toggleRegisterModal,
@@ -28,6 +33,7 @@ const AuthButtons = () => {
     toggleRegisterModal();
   };
 
+  //Phone login modal
   const {
     isOpen: isPhoneLoginModalOpen,
     toggle: togglePhoneLoginModal,
@@ -43,6 +49,31 @@ const AuthButtons = () => {
     toggleRegisterModal();
     togglePhoneLoginModal();
   };
+
+  //Forgot password modal
+  const {
+    isOpen: isForgotPasswordModalOpen,
+    toggle: toggleForgotPasswordModal,
+    onRequestClose: onRequestCloseForgotPasswordModal,
+  } = useDialog();
+
+  const switchLoginWithForgotPassword = () => {
+    toggleLoginModal();
+    toggleForgotPasswordModal();
+  };
+
+  //Reset password modal
+  const {
+    isOpen: isResetPasswordModalOpen,
+    toggle: toggleResetPasswordModal,
+    onRequestClose: onRequestCloseResetPasswordModal,
+  } = useDialog();
+
+  //Reset password approval modal
+  const {
+    isOpen: isResetPasswordApprovalModalOpen,
+    onRequestClose: onRequestCloseResetPasswordApprovalModal,
+  } = useDialog();
 
   return (
     <>
@@ -64,6 +95,7 @@ const AuthButtons = () => {
         onRequestClose={onRequestCloseLoginModal}
         switchModals={switchModals}
         switchLoginModals={switchLoginModals}
+        switchLoginWithForgotPassword={switchLoginWithForgotPassword}
       />
       <RegisterForm
         isOpen={isRegisterModalOpen}
@@ -77,6 +109,22 @@ const AuthButtons = () => {
         onRequestClose={onRequestClosePhoneLoginModal}
         switchModals={switchPhoneWithRegister}
         switchLoginModals={switchLoginModals}
+      />
+      <ForgotPasswordForm
+        isOpen={isForgotPasswordModalOpen}
+        toggle={toggleForgotPasswordModal}
+        onRequestClose={onRequestCloseForgotPasswordModal}
+      />
+      <ResetPasswordForm
+        isOpen={isResetPasswordModalOpen}
+        toggle={toggleResetPasswordModal}
+        onRequestClose={onRequestCloseResetPasswordModal}
+      />
+      <CustomModal
+        isOpen={isResetPasswordApprovalModalOpen}
+        onRequestClose={onRequestCloseResetPasswordApprovalModal}
+        title="Şifre Sıfırlama Talebiniz Alındı"
+        message="Şifre sıfırlama linki e-posta adresinize gönderildi. Linke tıklayarak şifrenizi yenileyebilirsiniz."
       />
     </>
   );

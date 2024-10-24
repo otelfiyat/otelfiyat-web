@@ -37,7 +37,7 @@ const PhoneLoginForm = ({
       toggle={toggle}
     >
       <form
-        className="p-4 flex flex-col gap-3 sm:w-[430px]"
+        className="p-4 flex flex-col gap-3 sm:w-[430px] sm:p-5"
         onSubmit={handleSubmit(onSubmit)}
       >
         <PhoneLoginFormTitle />

@@ -54,7 +54,7 @@
   }
 
   .custom-modal {
-    @apply bg-brand-white rounded-[16px] shadow-lg min-w-[330px] min-h-48 max-h-[620px] overflow-y-auto;
+    @apply bg-brand-white rounded-[16px] shadow-lg min-w-[330px] min-h-48 max-h-[620px] overflow-y-auto relative;
   }
 }
 

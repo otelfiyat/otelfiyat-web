@@ -13,6 +13,7 @@ interface LoginFormProps {
   onRequestClose: () => void;
   switchModals: () => void;
   switchLoginModals: () => void;
+  switchLoginWithForgotPassword: () => void;
 }
 
 const LoginForm = ({
@@ -21,6 +22,7 @@ const LoginForm = ({
   toggle,
   switchModals,
   switchLoginModals,
+  switchLoginWithForgotPassword,
 }: LoginFormProps) => {
   const { form, onSubmit } = useHandleForm();
 
@@ -37,7 +39,7 @@ const LoginForm = ({
       toggle={toggle}
     >
       <form
-        className="p-4 flex flex-col gap-3 sm:w-[430px]"
+        className="p-4 flex flex-col gap-3 sm:w-[430px] sm:p-5"
         onSubmit={handleSubmit(onSubmit)}
       >
         <LoginFormTitle />
@@ -66,7 +68,10 @@ const LoginForm = ({
               </span>
             </label>
           </div>
-          <span className="size-body2 text-brand-primary-500">
+          <span
+            className="size-body2 text-brand-primary-500 hover:text-brand-primary-700 cursor-pointer"
+            onClick={switchLoginWithForgotPassword}
+          >
             Şifremi Unuttum
           </span>
         </div>

@@ -30,3 +30,23 @@ export const phoneLoginFormSchema = z.object({
 });
 
 export type PhoneLoginForm = z.infer<typeof phoneLoginFormSchema>;
+
+//Forgot password form schema
+export const forgotPasswordFormSchema = z.object({
+  email: z.string().email("Geçerli bir e-posta adresi giriniz."),
+});
+
+export type ForgotPasswordForm = z.infer<typeof forgotPasswordFormSchema>;
+
+//Reset password form schema
+export const resetPasswordFormSchema = z
+  .object({
+    password: z.string().min(6, "Şifreniz en az 6 karakter olmalıdır."),
+    password2: z.string().min(6, "Şifreniz en az 6 karakter olmalıdır."),
+  })
+  .refine((data) => data.password === data.password2, {
+    message: "Şifreler uyuşmuyor.",
+    path: ["password2"],
+  });
+
+export type ResetPasswordForm = z.infer<typeof resetPasswordFormSchema>;
