@@ -10,6 +10,7 @@ interface FeatureCardProps {
 
 const FeatureCard = ({ card }: FeatureCardProps) => {
   const { title, subtitle, icon } = card;
+
   return (
     <div className="border border-brand-primary-100 rounded-lg flex gap-3 items-center p-3">
       <div className="flex items-center justify-center h-10 w-10">

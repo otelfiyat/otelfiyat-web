@@ -92,21 +92,23 @@ const ThemesCardsSlider = ({ themes }: ThemesCardsSliderProps) => {
         ))}
       </Swiper>
       <div className="flex justify-center items-center gap-8 mt-4 sm:justify-start">
-        <div className="hidden sm:flex sm:items-center sm:gap-2">
+        <div className="hidden sm:flex sm:items-center sm:gap-2 ">
           <button
             className="btn btn-sm btn-circle btn-outline text-brand-white font-bold border-2"
             onClick={() => swiperRef.current?.slidePrev()}
           >
             <ChevronLeftIcon className="w-4 h-4 font-bold" />
+            <span className="sr-only">Önceki</span>
           </button>
           <button
             className="btn btn-sm btn-circle btn-outline text-brand-white font-bold border-2"
             onClick={() => swiperRef.current?.slideNext()}
           >
             <ChevronRightIcon className="w-4 h-4 font-bold" />
+            <span className="sr-only">Sonraki</span>
           </button>
         </div>
-        <button className="btn btn-ghost text-brand-white size-title2">
+        <button className=" btn btn-ghost text-brand-white size-title2 sm:absolute sm:bottom-2 sm:right-5">
           Tümünü Gör
         </button>
       </div>
